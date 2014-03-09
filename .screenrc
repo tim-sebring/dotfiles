@@ -14,7 +14,7 @@ caption always "[screen %n%?: %t%?] %h"
 defscrollback 32768
 
 setenv DISPLAY :0.0
-bufferfile "/home/sebrint/.screen-buffer"
+bufferfile "~/.screen-buffer"
 # make search case-insensitive
 ignorecase on
 caption always '%{= dg} %H %{G}| %{B}%l %{G}|%=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
