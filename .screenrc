@@ -1,1 +1,27 @@
-/home/sebrint/.screenrc
+# set the official command prefix to C-\ *not* C-a!
+escape ^\\
+
+shell /bin/bash
+# don't pause for each screen message
+msgminwait 0
+# don't tell me when bells happen in other windows
+vbell off
+bell_msg ""
+# advertise hardstatus support
+termcapinfo  * '' 'hs:ts=\E_:fs=\E\\:ds=\E_\E\\'
+hardstatus lastline string "[screen %n%?: %t%?] %h"
+caption always "[screen %n%?: %t%?] %h"
+defscrollback 32768
+
+setenv DISPLAY :0.0
+bufferfile "/home/sebrint/.screen-buffer"
+# make search case-insensitive
+ignorecase on
+caption always '%{= dg} %H %{G}| %{B}%l %{G}|%=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
+screen -t irssi   0 /bin/bash
+screen -t proxy   1 /bin/bash
+screen -t javatut   2 /bin/bash
+screen -t local   3 /bin/bash
+select 2 2 
+fit
+
