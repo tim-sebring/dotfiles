@@ -10,3 +10,5 @@ fi
 export ALTERNATE_EDITOR=""
 
 alias ec='emacsclient -nw'
+export GPG_TTY=`tty`
+export PYTHONSTARTUP=~/.pythonrc
